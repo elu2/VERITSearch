@@ -19,4 +19,4 @@ def name_query(name):
 
 
 if __name__ == "__main__":
-    name_query(name).to_csv("singleQueryOut.csv", index=False)
+    name_query(name).to_csv("singleSearchOut.csv", index=False)

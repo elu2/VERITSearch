@@ -31,4 +31,4 @@ def multi_query(query_list):
 
 
 if __name__ == "__main__":
-    multi_query(case_proof).to_csv("multiQueryOut.csv", index=False)
+    multi_query(case_proof).to_csv("multiSearchOut.csv", index=False)
