@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Only line that needs to be changed
-name = None
+name = "".lower()
 
 # Load in necessary pd.DataFrames
 full_df = pd.read_pickle("./databases/combinedDBs.pkl")
@@ -19,4 +19,4 @@ def name_query(name):
 
 
 if __name__ == "__main__":
-    name_query(name)
+    name_query(name).to_csv("singleQueryOut.csv", index=False)

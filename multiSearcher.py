@@ -1,7 +1,9 @@
 import pandas as pd
 
 # Only line that needs to be changed
-query_list = ["beta-carotene", "sphingosine"]
+query_list = []
+# Turns all entries into lower case
+case_proof = [x.lower() for x in query_list]
 
 # Load in necessary pd.DataFrames
 full_df = pd.read_pickle("./databases/combinedDBs.pkl")
@@ -29,4 +31,4 @@ def multi_query(query_list):
 
 
 if __name__ == "__main__":
-    multi_query(query_list)
+    multi_query(case_proof).to_csv("multiQueryOut.csv", index=False)

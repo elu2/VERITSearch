@@ -26,4 +26,7 @@ full_df = full_df.append(proteins0f_df)
 full_df = full_df.append(proteinsgp_df)
 full_df = full_df.append(proteinsqz_df).reset_index(drop=True)
 
+# Turns all names into lower case
+full_df["name"] = full_df.name.apply(lambda a: str(a).lower())
+
 pickle.dump(full_df, open("combinedDBs.pkl", "wb"))
